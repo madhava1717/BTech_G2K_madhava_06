@@ -1,1 +1,31 @@
+#include <stdio.h>
+#include <ctype.h> // Required for tolower()
 
+int main() {
+    char ch;
+    // Boolean variable to store the result
+    int is_vowel = 0;
+
+    printf("Enter an alphabet: ");
+    // Read a single character from the user
+    scanf("%c", &ch);
+
+    // Convert the character to lowercase to simplify comparisons
+    char lower_ch = tolower(ch);
+
+    // Check if the character is one of the vowels
+    if (lower_ch == 'a' || lower_ch == 'e' || lower_ch == 'i' || lower_ch == 'o' || lower_ch == 'u') {
+        is_vowel = 1;
+    }
+
+    // Check if the input is actually an alphabet
+    if (!isalpha(ch)) {
+        printf("Error: Non-alphabetic character entered.\n");
+    } else if (is_vowel) {
+        printf("%c is a vowel.\n", ch);
+    } else {
+        printf("%c is a consonant.\n", ch);
+    }
+
+    return 0;
+}
