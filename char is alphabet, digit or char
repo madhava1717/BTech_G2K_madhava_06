@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <ctype.h> // Required for isalpha() and isdigit()
+
+int main() {
+    char ch;
+
+    // Prompt user for input
+    printf("Enter a character: ");
+    scanf("%c", &ch);
+
+    // Check character type
+    if (isalpha(ch)) {
+        printf("'%c' is an alphabet.\n", ch);
+    } else if (isdigit(ch)) {
+        printf("'%c' is a digit.\n", ch);
+    } else {
+        printf("'%c' is a special character.\n", ch);
+    }
+
+    return 0;
+}
