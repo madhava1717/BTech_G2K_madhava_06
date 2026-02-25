@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+
+int main() {
+    int age;
+    printf("Enter your age: ");
+    scanf("%d", &age);
+
+    if (age >=18) { 
+        printf("You meet the eligibility criteria (age>=18).\n");
+    } else  {
+        printf("You do not meet the eligibility criteria (age < 18).\n");
+    } 
+
+    
+
+    return 0;
+}
