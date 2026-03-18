@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main() {
+    int size;       // To store the number of elements the user wants to enter
+    int i;          // Loop counter
+    int sum = 0;    // To store the total sum, initialized to 0 to avoid garbage values
+
+    // 1. Get the size of the array from the user
+    printf("Enter the number of elements in the array: ");
+    scanf("%d", &size);
+
+    // Declare an array of the specified size
+    int arr[size];
+
+    // 2. Get the elements of the array from the user
+    printf("Enter the elements of the array, one by one:\\n");
+    for (i = 0; i < size; i++) {
+        printf("Element - %d: ", i + 1);
+        scanf("%d", &arr[i]);
+    }
+
+    // 3. Calculate the sum of all elements
+    for (i = 0; i < size; i++) {
+        sum += arr[i]; // Same as sum = sum + arr[i];
+    }
+
+    // 4. Print the final sum
+    printf("The sum of all elements in the array is: %d\\n", sum);
+
+    return 0;
+}
