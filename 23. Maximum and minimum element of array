@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+  
+    int arr[] = {45, 25, 21, 50, 15, 30};
+    
+    int n = sizeof(arr) / sizeof(arr[0]);
+    
+    
+    int mx, mn;
+    
+    
+    mx = arr[0];
+    mn = arr[0];
+    
+    
+    for (int i = 1; i < n; i++) {
+      
+        if (arr[i] > mx) {
+            mx = arr[i];
+        }
+        
+        if (arr[i] < mn) {
+            mn = arr[i];
+        }
+    }
+    
+  
+    printf("Maximum element is: %d\n", mx);
+    printf("Minimum element is: %d\n", mn);
+    
+    return 0;
+}
