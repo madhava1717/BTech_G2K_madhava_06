@@ -3,9 +3,9 @@
 
 void swap(int *a, int *b) {
     int temp;
-    temp = *a; // Store the value at address 'a' in temp
-    *a = *b;   // Put the value at address 'b' into address 'a'
-    *b = temp; // Put temp (original value of 'a') into address 'b'
+    temp = *a; 
+    *a = *b;   
+    *b = temp; 
 }
 
 int main() {
