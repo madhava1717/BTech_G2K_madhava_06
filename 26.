@@ -1,0 +1,27 @@
+include <stdio.h>
+
+int main() {
+    int n, choice;
+    printf("Enter matrix order n: ");
+    scanf("%d", &n);
+    int A[n][n], B[n][n], res[n][n];
+
+    printf("Enter Matrix A elements, then B:\n");
+    for(int i=0; i<n; i++) for(int j=0; j<n; j++) scanf("%d", &A[i][j]);
+    for(int i=0; i<n; i++) for(int j=0; j<n; j++) scanf("%d", &B[i][j]);
+
+    printf("1. Add\n2. Multiply\nEnter choice: ");
+    scanf("%d", &choice);
+
+    for(int i=0; i<n; i++) {
+        for(int j=0; j<n; j++) {
+            if(choice == 1) res[i][j] = A[i][j] + B[i][j];
+            else if(choice == 2) {
+                res[i][j] = 0;
+                for(int k=0; k<n; k++) res[i][j] += A[i][k] * B[k][j];
+            }
+        }
+    }
+    // Output res[n][n] here...
+    return 0;
+}
