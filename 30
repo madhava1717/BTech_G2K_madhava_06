@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// Function to swap two numbers using pointers
+
 void swap(int *a, int *b) {
     int temp;
     temp = *a; // Store the value at address 'a' in temp
@@ -13,7 +13,7 @@ int main() {
 
     printf("Before swap: x = %d, y = %d\n", x, y);
 
-    // Pass the addresses of x and y to the swap function
+    
     swap(&x, &y);
 
     printf("After swap: x = %d, y = %d\n", x, y);
