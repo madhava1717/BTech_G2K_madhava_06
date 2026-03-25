@@ -6,7 +6,7 @@ int main() {
     printf("Enter number of rows (m) and columns (n): ");
     scanf("%d %d", &m, &n);
 
-    // Diagonal elements only exist in a square matrix (m == n)
+    
     if (m != n) {
         printf("Diagonal sum is not defined for a non-square matrix.\n");
         return 0;
@@ -20,7 +20,7 @@ int main() {
         }
     }
 
-    // Calculating sum of diagonal elements (where row == col)
+
     for (i = 0; i < m; i++) {
         sum += matrix[i][i];
     }
